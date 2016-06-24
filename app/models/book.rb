@@ -9,6 +9,4 @@ class Book < ActiveRecord::Base
 end
 
 
-Book.import
-
 @books = Book.search('Test').records
