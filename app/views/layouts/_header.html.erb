@@ -3,7 +3,7 @@
     <div class="container">
       <%= link_to "BookStore", root_path, class: 'navbar-brand' %>
 
-      <%= form_tag books_path, class: "navbar-form navbar-right", method: :get do %>
+      <%= form_tag books_path, class: "navbar-form navbar-right", method: :get, remote: true do %>
           <div class='form-group'>
             <%= text_field_tag :query, params[:query], class: 'form-control', :html => {placeholder: "Search"} %>
             <%= submit_tag 'Search', class: 'btn btn-primary' %>
