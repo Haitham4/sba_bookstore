@@ -7,8 +7,3 @@ class Book < ActiveRecord::Base
   include Elasticsearch::Model::Callbacks
 
 end
-
-
-Book.import
-
-@books = Book.search('').records
