@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # for using elastic search
+gem 'twitter-typeahead-rails'
 gem 'searchkick'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'

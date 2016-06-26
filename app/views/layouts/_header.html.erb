@@ -1,16 +1,18 @@
 <header>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <%= link_to "BookStore", root_path, class: 'navbar-brand' %>
+      <%= link_to icon('book', "BookStore"), root_path, class: 'navbar-brand' %>
 
       <%= form_tag books_path, class: "navbar-form navbar-right", method: :get, remote: true do %>
-          <div class='form-group'>
-            <%= text_field_tag :query, params[:query], class: 'form-control', :html => {placeholder: "Search"} %>
-            <%= submit_tag 'Search', class: 'btn btn-primary' %>
+          <div class='form-group input-group'>
+
+            <span class="input-group-addon"> <%= icon('search') %> </span>
+            <%= text_field_tag :query, params[:query], class: 'form-control typeahead book-search', placeholder: "Search" %>
+            <span class="input-group-btn"> <%= submit_tag 'Search', class: 'btn btn-primary' %> </span>
+
           </div>
 
       <% end %>
-
     </div>
 
   </nav>
